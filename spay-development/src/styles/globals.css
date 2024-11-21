@@ -1,0 +1,15 @@
+/* styles/globals.css */
+html {
+    scroll-behavior: smooth;
+  }
+  
+  .section {
+    min-height: 100vh; /* Cada sección ocupa la pantalla completa */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+  }
+  
