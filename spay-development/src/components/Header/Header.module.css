@@ -1,45 +1,71 @@
 /* src/components/Header/Header.module.css */
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    pointer-events: none; /* Para que los clics pasen al contenido interior */
-    border: 10px solid #1976d2; /* Marco alrededor de la landing */
-    box-sizing: border-box;
-    z-index: 1000;
-  }
-  
-  .topBar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50px;
-    background-color: #1976d2;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    pointer-events: auto; /* Permite interacción en esta barra */
-    z-index: 1001;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  /* Header.module.css */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 97vw;
+  height: 97vh;
+  pointer-events: none;
+  border: 1px solid #ffffff;
+  padding: 20px;
+  box-sizing: border-box;
+  z-index: 1000;
+}
+
+.topBar {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20%;
+  height: 50px;
+  background-color: transparent;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto;
+  z-index: 1001;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+  /* Aplicamos la forma personalizada */
+  clip-path: polygon(
+    0% 0%, 
+    100% 0%, 
+    100% 60%, 
+    80% 100%, 
+    20% 100%, 
+    0% 60%
+  );
+}
+
+/* Pseudo-elemento para los bordes */
+.topBar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  clip-path: inherit; 
+  border: 2px solid #ffffff; 
+  z-index: -1; 
+  box-sizing: border-box; 
+}
+
 .nav {
-    display: flex;
-    gap: 20px;
-  }
-  
-  .nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-  }
-  
-  .nav a:hover {
-    color: #ff4081;
-  }
-  
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: #ff4081;
+}
