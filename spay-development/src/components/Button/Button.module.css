@@ -1,0 +1,24 @@
+.contactButton {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 25px;
+    background-color: #ED3533 !important;
+    border-radius: 50px;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-button:hover {
+    background-color: #c92b29;
+  }
+  
+  .contactButtonIcon {
+    margin-left: 16px;
+    width: 24px;
+    height: 24px;
+  }

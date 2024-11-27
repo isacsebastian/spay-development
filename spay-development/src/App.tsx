@@ -7,6 +7,7 @@ import Init from './pages/Init/Init';
 // import Contact from './pages/Contact/Contact';
 import './styles/globals.css';
 import Spay from './pages/Spay/Spay';
+import AirPodsVideoSection from './pages/Test/test';
 
 const App: React.FC = () => {
   return (
@@ -15,6 +16,7 @@ const App: React.FC = () => {
       <main>
         <Init />
         <Spay />
+        <AirPodsVideoSection/>
         {/* <Film />
         <AboutUs />
         <Impact />

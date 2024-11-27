@@ -2,8 +2,8 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 99vw;
-  height: 99vh;
+  width: 97vw;
+  height: 97vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15,10 +15,10 @@
 
 .svg {
   position: absolute;
-  top: 3%;
+  top: 2%;
   left: 50%;
   transform: translate(-50%, 0);
-  width: 100%;
+  width: 97%;
   height: auto;
   z-index: -1;
 }
@@ -31,7 +31,7 @@
 
 .nav {
   position: absolute;
-  top: 3%;
+  top: 2%;
   left: 50%;
   transform: translate(-50%, 0);
   display: flex;
@@ -43,12 +43,13 @@
 .nav a {
   color: white;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: normal;
+  font-size: 20px;
   transition: color 0.3s ease;
 }
 
 .nav a:hover {
-  color: #ff4081;
+  color: #ff2900;
 }
 
 .nav img {

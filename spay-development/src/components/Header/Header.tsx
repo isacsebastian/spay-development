@@ -1,6 +1,5 @@
 import React from 'react';
 import spayLogo from '../../assets/spay.svg';
-
 import styles from './Header.module.css';
 
 const Header: React.FC = () => {
