@@ -1,42 +1,102 @@
+
+/* Contenedor principal */
+.container {
+  position: relative; /* Contenedor para organizar elementos */
+  width: 100vw; /* Ocupa toda la pantalla */
+  height: 100vh;
+  overflow: hidden; /* Asegura que nada sobresalga */
+}
+
+/* Header */
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
+  position: absolute; /* Posiciona el header dentro del contenedor */
+  top: 50%;
+  left: 50%;
   width: 97vw;
-  height: 97vh;
+  height: 92vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000;
-  border: 1px solid #ffffff;
+  z-index: 1000; /* Detrás de los div de las esquinas */
+  border: 0 solid transparent; /* Elimina todos los bordes inicialmente */
+border-bottom: 1px solid #6a6a6a;
+border-left: 1px solid #6a6a6a;
+border-right: 1px solid #6a6a6a;
   box-sizing: border-box;
   padding: 0;
+  transform: translate(-50%, -50%);
+  background-color: black;
+
 }
+
+/* Divs de las esquinas */
+.cornerTopLeft,
+.cornerTopRight,
+.cornerBottomLeft,
+.cornerBottomRight {
+
+  position: fixed; /* Anclados a las esquinas de la pantalla */
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  z-index: 1100;
+  display: flex; /* Usamos flexbox para centrar */
+  align-items: center;
+  justify-content: center;
+  pointer-events: none; /* Evita interferencia con clics */
+}
+/* SVG dentro de las esquinas */
+.cornerSvg {
+  width: 13px;
+  height: 13px;
+  stroke: #6a6a6a; /* Cambia el color del SVG */
+}
+
+.cornerTopLeft {
+  top: 0;
+  left: 0;
+}
+
+.cornerTopRight {
+  top: 0;
+  right: 0;
+}
+
+.cornerBottomLeft {
+  bottom: 0;
+  left: 0;
+}
+
+.cornerBottomRight {
+  bottom: 0;
+  right: 0;
+}
+
 
 .svg {
   position: absolute;
-  top: 2%;
+  top: -2%;
   left: 50%;
   transform: translate(-50%, 0);
-  width: 97%;
+  width: 98%;
   height: auto;
   z-index: -1;
 }
 
 .svgPath {
   fill: none;
-  stroke: #d9d9d9;
+  stroke: #6a6a6a;
   stroke-width: 1;
 }
 
 .nav {
   position: absolute;
-  top: 2%;
+  top: -2%;
   left: 50%;
   transform: translate(-50%, 0);
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 70px;
   z-index: 1;
 }
 

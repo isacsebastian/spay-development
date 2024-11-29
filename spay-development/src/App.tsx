@@ -6,8 +6,8 @@ import Init from './pages/Init/Init';
 // import Impact from './pages/Impact/Impact';
 // import Contact from './pages/Contact/Contact';
 import './styles/globals.css';
-import Spay from './pages/Spay/Spay';
-import AirPodsVideoSection from './pages/Test/test';
+// import Spay from './pages/Spay/Spay';
+// import AirPodsVideoSection from './pages/Test/test';
 
 const App: React.FC = () => {
   return (
@@ -15,8 +15,8 @@ const App: React.FC = () => {
       <Header />
       <main>
         <Init />
-        <Spay />
-        <AirPodsVideoSection/>
+        {/* <Spay />
+        <AirPodsVideoSection/> */}
         {/* <Film />
         <AboutUs />
         <Impact />
