@@ -81,6 +81,7 @@ const Header: React.FC = () => {
           <a href="#film">Aplica ya</a>
         </nav>
       </header>
+      {/* <div className={styles.content}>{children}</div> */}
     </div>
   );
 };

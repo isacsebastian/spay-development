@@ -17,10 +17,6 @@ const App: React.FC = () => {
         <Init />
         {/* <Spay />
         <AirPodsVideoSection/> */}
-        {/* <Film />
-        <AboutUs />
-        <Impact />
-        <Contact /> */}
       </main>
     </div>
   );
