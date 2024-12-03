@@ -15,8 +15,8 @@ const Header: React.FC = () => {
           xmlns="http://www.w3.org/2000/svg"
           className={styles.cornerSvg}
         >
-          <path d="M6 0V6.25V12.5" stroke="#6a6a6a" />
-          <path d="M0 6L6.25 6L12.5 6" stroke="#6a6a6a" />
+          <path d="M6 0V6.25V12.5" stroke="#D9D9D9" />
+          <path d="M0 6L6.25 6L12.5 6" stroke="#D9D9D9" />
         </svg>
       </div>
       <div className={styles.cornerTopRight}>
@@ -28,8 +28,8 @@ const Header: React.FC = () => {
           xmlns="http://www.w3.org/2000/svg"
           className={styles.cornerSvg}
         >
-          <path d="M6 0V6.25V12.5" stroke="#6a6a6a" />
-          <path d="M0 6L6.25 6L12.5 6" stroke="#6a6a6a" />
+          <path d="M6 0V6.25V12.5" stroke="#D9D9D9" />
+          <path d="M0 6L6.25 6L12.5 6" stroke="#D9D9D9" />
         </svg>
       </div>
       <div className={styles.cornerBottomLeft}>
@@ -41,8 +41,8 @@ const Header: React.FC = () => {
           xmlns="http://www.w3.org/2000/svg"
           className={styles.cornerSvg}
         >
-          <path d="M6 0V6.25V12.5" stroke="#6a6a6a" />
-          <path d="M0 6L6.25 6L12.5 6" stroke="#6a6a6a" />
+          <path d="M6 0V6.25V12.5" stroke="#D9D9D9" />
+          <path d="M0 6L6.25 6L12.5 6" stroke="#D9D9D9" />
         </svg>
       </div>
       <div className={styles.cornerBottomRight}>
@@ -54,12 +54,20 @@ const Header: React.FC = () => {
           xmlns="http://www.w3.org/2000/svg"
           className={styles.cornerSvg}
         >
-          <path d="M6 0V6.25V12.5" stroke="#6a6a6a" />
-          <path d="M0 6L6.25 6L12.5 6" stroke="#6a6a6a" />
+          <path d="M6 0V6.25V12.5" stroke="#D9D9D9" />
+          <path d="M0 6L6.25 6L12.5 6" stroke="#D9D9D9" />
         </svg>
       </div>
 
       {/* Header */}
+      <div className={styles.coordinates}>
+      <p>cue ec 2,91166° S, 79,00252° O</p>
+      </div>
+      <div className={styles.coordinatesRight}>
+      <p>Local Time: 20:00 (8:00 pm )</p>
+      </div>
+
+
       <header className={styles.header}>
         <svg
           className={styles.svg}
@@ -68,7 +76,7 @@ const Header: React.FC = () => {
           preserveAspectRatio="none"
         >
           <path
-            d="M0 1H357.584L386.975 30H934.127L962.538 1L1326 1"
+            d="M0 1H357.584L386.975 30H934.127L962.538 1L1326 1"stroke="#D9D9D9"
             className={styles.svgPath}
           />
         </svg>
