@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import styles from './AirPodsVideoSection.module.css';
+import styles from './Film.module.css';
 
 const AirPodsVideoSection: React.FC = () => {
   const videoRef = useRef<HTMLVideoElement>(null);

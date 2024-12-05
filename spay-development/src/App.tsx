@@ -7,6 +7,7 @@ import Init from './pages/Init/Init';
 // import Contact from './pages/Contact/Contact';
 import './styles/globals.css';
 import Spay from './pages/Spay/Spay';
+import AirPodsVideoSection from './pages/Film/Film';
 // import AirPodsVideoSection from './pages/Test/test';
 
 const App: React.FC = () => {
@@ -18,6 +19,7 @@ const App: React.FC = () => {
         <Spay />
         {/* <Spay />
         <AirPodsVideoSection/> */}
+        <AirPodsVideoSection/>
       </main>
     </div>
   );
