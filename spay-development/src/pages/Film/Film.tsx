@@ -11,15 +11,23 @@ const AirPodsVideoSection: React.FC = () => {
 
     const handleScroll = () => {
       if (video) {
-        const time = (window.scrollY / 1000) * FRAMES / FPS;
-        video.currentTime = time;
+        const scrollTop = window.scrollY;
+        const maxScroll = document.body.scrollHeight - window.innerHeight;
+        const scrollFraction = scrollTop / maxScroll;
+        const time = scrollFraction * (FRAMES / FPS);
+
+        video.currentTime = Math.min(time, video.duration || 0);
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    const throttledHandleScroll = () => {
+      window.requestAnimationFrame(handleScroll);
+    };
+
+    window.addEventListener('scroll', throttledHandleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('scroll', throttledHandleScroll);
     };
   }, []);
 
@@ -27,10 +35,9 @@ const AirPodsVideoSection: React.FC = () => {
     <section className={styles.section}>
       <video 
         ref={videoRef}
-        id="video" 
-        width="998" 
-        height="560" 
-        playsInline 
+        aria-hidden="true"
+        width="100%"
+        playsInline
         poster="https://lqez.github.io/js/airpodsvf/video.jpg"
         className={styles.video}
       >
@@ -43,22 +50,13 @@ const AirPodsVideoSection: React.FC = () => {
       
       <div className={styles.scrollDummy}>
         <h1>AirPods Pro page is TOO BIG</h1>
-        
         <p>
           <a href="https://www.apple.com/kr/airpods-pro/">
-            https://www.apple.com/kr/airpods-pro/
-          </a>{" "}
-          contains 1,500+ images and their size is over 60MiB.
+            Apple AirPods Pro Page
+          </a>
         </p>
-        
         <p>
-          I encoded the first 148ea, 4.8MiB of AirPods Pro images into a single 1.1MiB x264 video file and put it as a background. 
-          The video file has total 148 i-frame frames by ffmpeg's <code>-intra</code> option. 
-          It makes much smoother frame changes.
-        </p>
-        
-        <p>
-          Image courtesy of Apple, Inc.
+          Video encoded with 148 frames into 1.1MiB for smooth scrolling.
         </p>
       </div>
     </section>
