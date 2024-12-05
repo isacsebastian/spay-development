@@ -1,13 +1,13 @@
 import React from 'react';
-import styles from './Init.module.css';
+import styles from './Impact.module.css';
 
-const Init: React.FC = () => {
+const Impact: React.FC = () => {
   return (
-    <section id="init" className={styles.init}>
-      <h1>Welcome to Init Section</h1>
+    <section id="impact" className={styles.impact}>
+      <h1>Welcome to Impact Section</h1>
       <p>This is the beginning of the journey.</p>
     </section>
   );
 };
 
-export default Init;
+export default Impact;

@@ -3,6 +3,9 @@ import Header from './components/Header/Header';
 import './styles/globals.css';
 import Spay from './pages/Spay/Spay';
 import AirPodsVideoSection from './pages/Film/Film';
+import Impact from './pages/Impact/Impact';
+import Init from './pages/Init/Init';
+import Contact from './pages/Contact/Contact';
 
 const App: React.FC = () => {
   return (
@@ -10,7 +13,10 @@ const App: React.FC = () => {
       <Header />
       <main>
         <Spay />
-        <AirPodsVideoSection/>
+        <AirPodsVideoSection/> 
+        <Init />
+        <Impact />
+        <Contact />
       </main>
     </div>
   );
