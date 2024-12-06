@@ -61,7 +61,7 @@ const Header: React.FC = () => {
 
       {/* Header */}
       <div className={styles.coordinates}>
-      <p>cue ec 2,91166° S, 79,00252° O</p>
+      <p> 2,91166° S, 79,00252° O</p>
       </div>
       <div className={styles.coordinatesRight}>
       <p>Local Time: 20:00 (8:00 pm )</p>
