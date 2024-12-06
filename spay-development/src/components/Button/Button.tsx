@@ -7,7 +7,7 @@ const ContactButton: React.FC = () => {
     <button 
       className={styles.contactButton}
     >
-      Contáctanos
+      Descubre
       <img 
         src={ButtonIcon} 
         alt="Contact Icon" 

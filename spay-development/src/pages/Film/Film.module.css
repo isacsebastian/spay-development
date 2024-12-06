@@ -37,7 +37,7 @@
   left: 50%;
   width: 70%;
   height: 70%;
-  object-fit: contain;
+  object-fit: cover;
   background-color: rgba(211, 18, 18, 0.5); /* Añade un fondo temporal */
   color: white; /* Texto visible para debug */
   display: flex;
