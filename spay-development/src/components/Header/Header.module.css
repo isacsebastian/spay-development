@@ -21,7 +21,8 @@
   position: fixed;
   top: 50%;
   left: 50%;
-  width: 98vw;
+  /* width: 97vw; */
+  width: 98%;
   height: 95vh;
   display: flex;
   align-items: center;
