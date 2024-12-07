@@ -1,8 +1,48 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import spayLogo from '../../assets/spay.svg';
 import styles from './Header.module.css';
 
 const Header: React.FC = () => {
+  const [processedMoney, setProcessedMoney] = useState(9950999); // Comienza en 9,950,999
+  const [isInitialAnimationDone, setIsInitialAnimationDone] = useState(false);
+
+  useEffect(() => {
+    if (!isInitialAnimationDone) {
+      // Animación inicial: Incrementa rápidamente hasta 10,000,000
+      const target = 10000000;
+      const step = 1000; // Incrementos rápidos
+      const intervalTime = 30; // Tiempo entre incrementos (30ms)
+
+      const interval = setInterval(() => {
+        setProcessedMoney((prev) => {
+          if (prev + step >= target) {
+            clearInterval(interval);
+            setIsInitialAnimationDone(true); // Marca como completada la animación inicial
+            return target;
+          }
+          return prev + step;
+        });
+      }, intervalTime);
+
+      return () => clearInterval(interval);
+    }
+  }, [isInitialAnimationDone]);
+
+  useEffect(() => {
+    if (isInitialAnimationDone) {
+      // Incremento diario después de la animación inicial
+      const increment = 100; // Incremento diario
+      const target = 15000000; // Meta: 15,000,000 USD
+      const intervalTime = (24 * 60 * 60 * 1000) / 365; // Simular días reales
+
+      const interval = setInterval(() => {
+        setProcessedMoney((prev) => (prev < target ? prev + increment : target));
+      }, intervalTime);
+
+      return () => clearInterval(interval);
+    }
+  }, [isInitialAnimationDone]);
+
   return (
     <div className={styles.container}>
       {/* Divs de las esquinas con SVG */}
@@ -19,6 +59,7 @@ const Header: React.FC = () => {
           <path d="M0 6L6.25 6L12.5 6" stroke="#D9D9D9" />
         </svg>
       </div>
+      {/* Otras esquinas */}
       <div className={styles.cornerTopRight}>
         <svg
           width="13"
@@ -61,12 +102,13 @@ const Header: React.FC = () => {
 
       {/* Header */}
       <div className={styles.coordinates}>
-      <p> 2,91166° S, 79,00252° O</p>
+        <p>2,91166° S, 79,00252° O</p>
       </div>
       <div className={styles.coordinatesRight}>
-      <p>Local Time: 20:00 (8:00 pm )</p>
+        <p>
+          Dinero Procesado: {processedMoney.toLocaleString('en-US')} USD
+        </p>
       </div>
-
 
       <header className={styles.header}>
         <svg
@@ -76,20 +118,20 @@ const Header: React.FC = () => {
           preserveAspectRatio="none"
         >
           <path
-            d="M0 1H357.584L386.975 30H934.127L962.538 1L1326 1"stroke="#D9D9D9"
+            d="M0 1H357.584L386.975 30H934.127L962.538 1L1326 1"
+            stroke="#D9D9D9"
             className={styles.svgPath}
           />
         </svg>
 
         <nav className={styles.nav}>
-          <a href="#init">Home</a>
+          <a href="#home">Home</a>
           <a href="#spay">
             <img src={spayLogo} alt="Logo de Spay" />
           </a>
-          <a href="#film">Aplica ya</a>
+          <a href="#contact">Aplica ya</a>
         </nav>
       </header>
-      {/* <div className={styles.content}>{children}</div> */}
     </div>
   );
 };

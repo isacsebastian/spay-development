@@ -1,0 +1,17 @@
+:root {
+    /* Colores */
+    --primary-color: #ffffff;
+    --secondary-color: #000000;
+  
+    /* Tipografía */
+    --font-primary: 'Poppins', sans-serif;
+  
+    /* Z-Index */
+    --z-header: 1000;
+    --z-overlay: 1005;
+    --z-default: 1;
+  
+    /* Otros */
+    --transition-fast: 0.2s ease-out;
+  }
+  
