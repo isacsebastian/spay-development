@@ -45,8 +45,9 @@
   position: fixed;
   top: 0%;
   left: 5%;
-  /* text-align: center; */
+  display: flex;
   line-height: 75px;
+  gap: 10px;
 }
 
 .coordinatesRight {

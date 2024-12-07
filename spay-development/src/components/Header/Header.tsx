@@ -102,11 +102,13 @@ const Header: React.FC = () => {
 
       {/* Header */}
       <div className={styles.coordinates}>
-        <p>2,91166° S, 79,00252° O</p>
+        {/* <a href="https://maps.app.goo.gl/3Qrsg3n8V4TQQnss7"> */}
+        <p>-2.911632198089882,L</p><p>-79.00263205962538 P</p>
+        {/* </a> */}
       </div>
       <div className={styles.coordinatesRight}>
         <p>
-          Dinero Procesado: {processedMoney.toLocaleString('en-US')} USD
+        Processed Money: {processedMoney.toLocaleString('en-US')} USD
         </p>
       </div>
 
