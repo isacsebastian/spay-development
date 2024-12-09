@@ -6,7 +6,7 @@
   left: 50%;
   padding-top: 100px;
   transform: translate(-50%, -50%);
-  z-index: 100; 
+  z-index: 400; 
   width: 90%;
   height: auto;
   display: flex;
