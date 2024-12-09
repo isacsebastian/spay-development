@@ -9,6 +9,7 @@
     top: 0; /* Ubica al inicio verticalmente */
     left: 50%;
     transform: translateX(-50%); /* Centra horizontalmente */
+    z-index: 450;
   }
   
   .image {

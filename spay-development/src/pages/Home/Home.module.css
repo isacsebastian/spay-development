@@ -11,7 +11,7 @@
   height: auto;
   display: flex;
   flex-direction: column;
-  background-color: transparent;
+  background-color: black;
   align-items: left;
 }
 
