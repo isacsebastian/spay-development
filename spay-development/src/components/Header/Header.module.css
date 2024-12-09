@@ -39,7 +39,7 @@
 }
 
 .coordinates {
-  background-color: transparent;
+  background-color: black;
   z-index: 500;
   width: 400px;
   height: 100px;
@@ -49,16 +49,18 @@
   display: flex;
   line-height: 75px;
   gap: 10px;
+  z-index: 400;
+
 }
 
 .coordinatesRight {
-  background-color: transparent;
-  z-index: 500;
+  background-color: black;
+  z-index: 400;
   width: 400px;
   height: 100px;
   position: fixed;
   top: 0%;
-  right: -3%;
+  right: -1%;
   /* text-align: center; */
   line-height: 75px;
 }
