@@ -1,6 +1,7 @@
 /* styles/globals.css */
 html {
     scroll-behavior: smooth;
+    background-color: black;
   }
   
   .section {
