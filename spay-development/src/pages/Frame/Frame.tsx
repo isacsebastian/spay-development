@@ -29,9 +29,12 @@ const Frame: React.FC = () => {
         const frameAnimation = gsap.to({}, {
             scrollTrigger: {
                 trigger: containerRef.current,
-                start: "top top",
+                start: "top bottom",
                 end: "bottom bottom",
                 scrub: 1,
+                markers: true,
+                pin: true,
+                pinSpacing: true,
                 onUpdate: (self) => {
                     const progress = self.progress;
                     const frameIndex = Math.round(progress * (totalFrames - 1)) + 1;
@@ -44,6 +47,9 @@ const Frame: React.FC = () => {
             frameAnimation.kill();
         };
     }, []);
+
+        
+
 
     return (
         <div
