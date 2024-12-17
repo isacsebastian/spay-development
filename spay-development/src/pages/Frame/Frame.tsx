@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 const Frame: React.FC = () => {
     const containerRef = useRef<HTMLDivElement>(null);
     const [currentFrame, setCurrentFrame] = useState(1);
-    const totalFrames = 64; // Total de frames disponibles
+    const totalFrames = 64; 
     const imageUrl = (frame: number) =>
         `https://www.apple.com/105/media/us/airpods-pro/2022/d2deeb8e-83eb-48ea-9721-f567cf0fffa8/anim/hero/large/${frame
             .toString()
@@ -59,7 +59,6 @@ const Frame: React.FC = () => {
             <img
             src={imageUrl(currentFrame)}
             alt={`Frame ${currentFrame}`}
-            className={styles.image} 
             />
         </div>
     );

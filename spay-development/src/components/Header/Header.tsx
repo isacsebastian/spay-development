@@ -111,7 +111,9 @@ const Header: React.FC = () => {
         Processed Money: {processedMoney.toLocaleString('en-US')} USD
         </p>
       </div>
-
+      <div className={styles.borderLeft}></div>
+<div className={styles.borderRight}></div>
+<div className={styles.borderBottom}></div>
       <header className={styles.header}>
         <svg
           className={styles.svg}
