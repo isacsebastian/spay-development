@@ -1,0 +1,26 @@
+.frameContainer {
+    height: 200vh;
+    width: 100%;
+  }
+  
+  .centeredImage {
+    width: 100%;
+  }
+  
+  .home {
+    position: relative; 
+    width: 90%;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .overlayText {
+    font-size: 95px;
+    text-align: left;
+    font-weight: bold;
+    color: #fff;
+    transition: opacity 0.2s ease-out; 
+  }
+  
