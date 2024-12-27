@@ -1,0 +1,12 @@
+.frameContainer {
+    height: 200vh;
+    width: 100%;
+    z-index: 100;
+    background-color: burlywood;
+}
+
+.centeredImage {
+    width: 100%;
+    z-index: 100;
+
+}

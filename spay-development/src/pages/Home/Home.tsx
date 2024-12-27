@@ -1,37 +1,45 @@
-
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import styles from './Home.module.css';
 import ContactButton from '../../components/Button/Button';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Home: React.FC = () => {
-  const [opacity, setOpacity] = useState(1); // Controla la opacidad del texto y el botón
+  const containerRef = useRef<HTMLDivElement>(null);
+  const textRef = useRef<HTMLHeadingElement>(null);
+  const buttonRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      const maxOpacityScroll = 300; // Ajustar hasta dónde desaparecen los elementos
-      setOpacity(Math.max(1 - scrollTop / maxOpacityScroll, 0));
-    };
+    const animation = gsap.timeline({
+      scrollTrigger: {
+        trigger: containerRef.current, // Elemento disparador
+        start: 'top top',
+        end: 'bottom top', 
+        scrub: true,
+        pin: true, 
+        markers: true,
+      },
+    });
 
-    const throttledHandleScroll = () => {
-      window.requestAnimationFrame(handleScroll);
-    };
-
-    window.addEventListener('scroll', throttledHandleScroll);
+    animation
+      .to(textRef.current, { opacity: 0, duration: 1 }, 0)
+      .to(buttonRef.current, { opacity: 0, duration: 1 }, 0);
 
     return () => {
-      window.removeEventListener('scroll', throttledHandleScroll);
+      animation.kill();
     };
   }, []);
 
   return (
-    <section id="home" className={styles.home}>
-      <h1 style={{ opacity }} className={styles.overlayText}>
+    <section id="home" ref={containerRef} className={styles.home}>
+      <h1 ref={textRef} className={styles.overlayText}>
         La Solución de Cobro <br />
         Global para Empresas<br />
         Tecnológicas
       </h1>
-      <div style={{ opacity, transition: 'opacity 0.2s ease-out' }}> 
+      <div ref={buttonRef}>
         <ContactButton />
       </div>
     </section>

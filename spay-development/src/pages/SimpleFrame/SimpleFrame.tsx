@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import styles from "./SimpleFreature.module.css";
+import styles from "./SimpleFrame.module.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -22,8 +22,8 @@ const SimpleFrame: React.FC = () => {
         gsap.to({}, {
             scrollTrigger: {
                 trigger: containerRef.current,
-                start: "top center",
-                end: "bottom center",
+                start: "top bottom",
+                end: "bottom top",
                 scrub: true,
                 markers: true,
                 pin: false,
